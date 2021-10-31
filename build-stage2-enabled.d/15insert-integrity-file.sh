@@ -1,0 +1,1 @@
+../build-stage2-available.d/15insert-integrity-file.sh

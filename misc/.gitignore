@@ -1,0 +1,12 @@
+# Linux binaries
+encrypt0/encrypt0
+decrypt0/decrypt0
+genpads0/genpads0
+
+# Windows binaries
+encrypt0/encrypt0.exe
+decrypt0/decrypt0.exe
+genpads0/genpads0.exe
+
+# Emacs
+*~
