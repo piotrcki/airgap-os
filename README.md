@@ -1,9 +1,9 @@
-# Introducing Airgap-OS
+# Introducing Airgap OS
 
-Airgap-OS is a live amnesic operating system that prevent network communication.
+Airgap OS is a live amnesic operating system that prevent network communication.
 It is design for security purposes.
 
-Here are some typical use-case where Airgap-OS may be useful:
+Here are some typical use-case where Airgap OS may be useful:
 
 * handling highly confidential data,
 * using and storing PKI root private key,
@@ -26,23 +26,23 @@ Here are some typical use-case where Airgap-OS may be useful:
 
 # Getting started: download the ISO
 
-Download the ISO from the release section of this repository and burn it to a DVD or a flashdrive.
+[Download the ISO from the release section of this repository](https://github.com/piotrcki/Airgap OS/releases) and burn it to a DVD or a flashdrive.
 
 # Security
 
-The security model of Airgap-OS should prevent the vast majority of cyberattacks, including those involving 0days.
+The security model of Airgap OS should prevent the vast majority of cyberattacks, including those involving 0days.
 
 ## Integrity
 
-ISO integrity information will be published on [my Twitter account](https://twitter.com/piotrcki) at each release.
+ISO integrity information will be published on [my Twitter account](https://twitter.com/search?q=(%23AirgapOS) (from%3Apiotrcki)&src=typed_query) at each release.
 
 Software integrity only relies on Debian and the content of this repository.
 
-Addition integrity references can be found in `/usr/share/airgap-os-integrity.txt`.
+Addition integrity references can be found in `/usr/share/Airgap-OS-integrity.txt`.
 
 ## Security features
 
-Airgap-OS have the following security properties.
+Airgap OS have the following security properties.
 
 * There is no way to communicate with the OS through IP protocols coming from outside.
 * Unprivileged software cannot communicate with the outside through IP protocols.
@@ -57,7 +57,7 @@ Here are some identified security limitations.
 * A privileged malware may alter the ISO image. This can be solved by using a read-only storage.
 * An unprivileged malware could use a covert channel to communicate with attackers. The range of such channels is usually short.
 * Data could leak through various side channels, like [TEMPEST](https://www.youtube.com/watch?v=BpNP9b3aIfY).
-* I have no ways to protect by build system from 3 letters actors. Build the ISO yourself to avoid this issue. :-)
+* I have no ways to protect my build environment from 3 letters actors. Build the ISO yourself to avoid this issue. :-)
 
 # Build
 
