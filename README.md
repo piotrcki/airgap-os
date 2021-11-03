@@ -36,7 +36,7 @@ The security model of Airgap OS should prevent the vast majority of cyberattacks
 
 ## Integrity
 
-ISO integrity information will be published on [my Twitter account](https://twitter.com/search?q=(%23AirgapOS) (from%3Apiotrcki)&src=typed_query) at each release.
+ISO integrity information will be published on [my Twitter account](https://twitter.com/search?q=%28%23AirgapOS%29%28from%3Apiotrcki%29) at each release.
 
 Software integrity only relies on Debian and the content of this repository.
 
