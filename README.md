@@ -28,6 +28,8 @@ Here are some typical use-case where Airgap OS may be useful:
 
 [Download the ISO from the release section of this repository](https://github.com/piotrcki/Airgap OS/releases) and burn it to a DVD or a flashdrive.
 
+The default password is `changeme` and the default keyboard layout is QWERTY.
+
 # Security
 
 The security model of Airgap OS should prevent the vast majority of cyberattacks, including those involving 0days.
