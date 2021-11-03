@@ -26,7 +26,7 @@ Here are some typical use-case where Airgap OS may be useful:
 
 # Getting started: download the ISO
 
-[Download the ISO from the release section of this repository](https://github.com/piotrcki/Airgap OS/releases) and burn it to a DVD or a flashdrive.
+[Download the ISO from the release section of this repository](https://github.com/piotrcki/airgap-os/releases) and burn it to a DVD or a flashdrive.
 
 The default password is `changeme` and the default keyboard layout is QWERTY.
 
