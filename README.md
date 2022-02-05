@@ -19,6 +19,7 @@ Here are some typical use-case where Airgap OS may be useful:
 * [Keepass2](https://keepass.info/).
 * [steghide](http://steghide.sourceforge.net/).
 * [GnuPG2](https://gnupg.org/) with graphical interface.
+* [age](https://github.com/FiloSottile/age).
 * [crypt0](https://github.com/piotrcki/crypt0) and [sign0](https://github.com/piotrcki/sign0) for long term data protection.
 * [xca](https://hohnstaedt.de/xca/) and [OpenSSL](https://www.openssl.org) for PKI management.
 * Smartcard support.
