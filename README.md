@@ -1,9 +1,9 @@
 # Introducing Airgap OS
 
 Airgap OS is a live amnesic operating system that prevent network communication.
-It is design for security purposes.
+It is designed for security purposes.
 
-Here are some typical use-case where Airgap OS may be useful:
+Here are some typical use-cases where Airgap OS may be useful:
 
 * handling highly confidential data,
 * using and storing PKI root private key,
@@ -37,22 +37,20 @@ The security model of Airgap OS should prevent the vast majority of cyberattacks
 
 ## Integrity
 
-~~ISO integrity information will be published on [my Twitter account](https://twitter.com/search?q=%28%23AirgapOS%29%28from%3Apiotrcki%29) at each release.~~
+Software integrity only relies on the integrity of the build environment, Debian and the content of this repository.
 
-Software integrity only relies on Debian and the content of this repository.
-
-Addition integrity references can be found in `/usr/share/Airgap-OS-integrity.txt`.
+Integrity references can be found in `/usr/share/Airgap-OS-integrity.txt`.
 
 ## Security features
 
 Airgap OS have the following security properties.
 
 * There is no way to communicate with the OS through IP protocols coming from outside.
-* Unprivileged software cannot communicate with the outside through IP protocols.
+* Unprivileged software cannot communicate with the outside world through IP protocols.
 
 ## Security limitations
 
-Here are some identified security limitations.
+Here are some known security limitations.
 
 * In the event of malicious physical access to the used device, a lot of scary shit can happen. 
 * Firmwares may have their own network stacks that are out of control from the OS. This can be solved by physically removing or neutralizing network hardware.
