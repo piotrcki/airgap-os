@@ -4,6 +4,7 @@ caja-seahorse
 console-data
 firmware-linux-nonfree
 git
+gnome-disk-utility
 htop
 hunspell-af
 hunspell-an

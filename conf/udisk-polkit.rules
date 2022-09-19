@@ -1,0 +1,19 @@
+addRule(function(action, subject) {
+    var authorized = ["org.freedesktop.udisks2.filesystem-mount",
+    "org.freedesktop.udisks2.encrypted-unlock",
+    "org.freedesktop.udisks2.encrypted-change-passphrase",
+    "org.freedesktop.udisks2.power-off-drive",
+    "org.freedesktop.udisks2.eject-media",
+    "org.freedesktop.udisks2.modify-device",
+    "org.freedesktop.udisks2.rescan",
+    "org.freedesktop.udisks2.ata-smart-update",
+    "org.freedesktop.udisks2.ata-secure-erase",
+    "org.freedesktop.udisks2.cancel-job"];
+
+    for (var i = 0; i < authorized.length; i++) {
+        if (action.id === authorized[i]) {
+            return polkit.Result.YES;
+        }
+    }
+    return polkit.Result.NOT_HANDLED;
+});

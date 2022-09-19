@@ -15,6 +15,7 @@ Here are some typical use-cases where Airgap OS may be useful:
 * Debian bullseye based Linux with MATE Desktop.
 * x86-64 architecture (open an issue if you need another one).
 * LibreOffice, VLC, GIMP and other usual tools.
+* Unprivileged manipulation of storage devices.
 * Only 1G of RAM required.
 * [Keepass2](https://keepass.info/).
 * [steghide](http://steghide.sourceforge.net/).
