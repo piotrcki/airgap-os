@@ -1,6 +1,6 @@
 # Introducing Airgap OS
 
-Airgap OS is a live amnesic operating system that prevent network communication.
+Airgap OS is a live amnesic operating system that prevents network communication.
 It is designed for security purposes.
 
 Here are some typical use-cases where Airgap OS may be useful:
