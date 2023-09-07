@@ -26,7 +26,9 @@ then
     exit -1
 fi
 
+mount none /proc -t proc
 debootstrap --arch="${ARCH}" "${DEBIAN_RELEASE}" "${USERLAND_ROOT}" "${DEBIAN_MIRROR}"
+umount /proc
 cat conf/hostname > "${USERLAND_ROOT}/etc/hostname"
 cat conf/sources.list-build > "${USERLAND_ROOT}/etc/apt/sources.list"
 sed -i "s,SECMIRROR,${DEBIAN_SECURITY_MIRROR}," "${USERLAND_ROOT}/etc/apt/sources.list"
