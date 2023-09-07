@@ -1,4 +1,4 @@
-deb MIRROR    RELEASE          main contrib non-free
-deb SECMIRROR RELEASE-security main contrib non-free
-deb MIRROR    RELEASE-updates  main contrib non-free
+deb MIRROR    RELEASE          main contrib non-free non-free-firmware
+deb SECMIRROR RELEASE-security main contrib non-free non-free-firmware
+deb MIRROR    RELEASE-updates  main contrib non-free non-free-firmware
 

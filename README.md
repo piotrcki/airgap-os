@@ -12,7 +12,7 @@ Here are some typical use-cases where Airgap OS may be useful:
 
 ## Features
 
-* Debian bullseye based Linux with MATE Desktop.
+* Debian bookworn (12) based Linux with MATE Desktop.
 * x86-64 architecture (open an issue if you need another one).
 * LibreOffice, VLC, GIMP and other usual tools.
 * Unprivileged manipulation of storage devices.

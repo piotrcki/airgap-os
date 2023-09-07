@@ -19,9 +19,9 @@ set -e
 set -x
 
 BUILD_ENV='/var/airgap-os-build'
-DEBIAN_RELEASE='bullseye'
+DEBIAN_RELEASE='bookworm'
 DEFAULT_DEBIAN_MIRROR='https://ftp.debian.org/debian'
-DEFAULT_DEBIAN_SECURITY_MIRROR='http://security.debian.org/debian-security'
+DEFAULT_DEBIAN_SECURITY_MIRROR='https://security.debian.org/debian-security'
 DEFAULT_ARCH='amd64'
 
 cd "$(dirname $(readlink -f "${0}"))"

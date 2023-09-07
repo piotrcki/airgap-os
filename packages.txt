@@ -95,6 +95,7 @@ opensc
 openssl
 p7zip-full
 p7zip-rar
+python-yubico-tools
 qrencode
 restic
 seahorse
@@ -106,7 +107,10 @@ xca
 xz-utils
 ykcs11
 ykls
+yubico-piv-tool
+yubikey-agent
+yubikey-luks
 yubikey-manager
+yubikey-manager-qt
 yubikey-personalization
-yubikey-personalization-gui
 yubioath-desktop
