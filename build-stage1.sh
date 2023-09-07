@@ -35,7 +35,7 @@ sed -i "s,MIRROR,${DEBIAN_MIRROR}," /etc/apt/sources.list
 sed -i "s,RELEASE,${DEBIAN_RELEASE}," /etc/apt/sources.list
 apt-get update -y
 apt-get dist-upgrade -y
-apt-get install genisoimage isolinux syslinux-utils syslinux-efi dosfstools \
+apt-get install xorriso isolinux syslinux-utils syslinux-efi dosfstools \
      fusefat squashfs-tools debootstrap parted git -y
 mkdir -p -m 0700 "${USERLAND_ROOT}" /iso-content
 
@@ -61,7 +61,7 @@ if [ "${ARCH}" = 'amd64' ]
 then
     mknod /dev/fuse c 10 229
     mkdir -m 0000 /esp
-    head -c 48M /dev/zero > /iso-content/efi64.img
+    head -c 96M /dev/zero > /iso-content/efi64.img
     mkfs.fat --mbr=y -F 16 /iso-content/efi64.img
     fusefat -o rw+ /iso-content/efi64.img /esp
     mkdir -p /esp/EFI/BOOT
@@ -72,19 +72,12 @@ then
         conf/syslinux.cfg /esp/
     sync
     umount /esp
-    EFI_OPTS='-eltorito-alt-boot -e efi64.img -no-emul-boot'
+    EFI_OPTS='-append_partition 2 28732ac11ff8d211ba4b00a0c93ec93b /iso-content/efi64.img -appended_part_as_gpt'
+    EFI_OPTS="${EFI_OPTS} -eltorito-alt-boot -e --interval:appended_partition_2::: -no-emul-boot"
 fi
 
 ### Pack all together ###
 mksquashfs "${USERLAND_ROOT}" /iso-content/filesystem.squashfs -comp xz -Xdict-size 100%
-genisoimage -J -joliet-long -o /output.iso -b isolinux.bin  \
-    -no-emul-boot -boot-load-size 4 -boot-info-table $EFI_OPTS -c boot.cat \
-    -V Airgap-OS /iso-content
-
-if [ -n "${EFI_OPTS}" ]
-then
-    isohybrid --uefi /output.iso
-    parted /output.iso resizepart 2 49MiB
-else
-    isohybrid /output.iso
-fi
+xorriso -as mkisofs -J -joliet-long -o /output.iso -b isolinux.bin  \
+    -no-emul-boot -boot-info-table --protective-msdos-label --mbr-force-bootable -c boot.cat \
+    ${EFI_OPTS} -V Airgap-OS /iso-content
