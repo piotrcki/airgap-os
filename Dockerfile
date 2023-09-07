@@ -24,6 +24,6 @@ RUN apt-get install debootstrap -y
 
 COPY --chown=root:root . /usr/local/lib/airgap-os
 
-RUN echo -e "#!/bin/sh\ncd /usr/local/lib/airgap-os/\nexec ./build.sh" > /usr/local/sbin/build-airgap-os
+RUN echo '#!/bin/sh\ncd /usr/local/lib/airgap-os/\nexec ./build.sh' > /usr/local/sbin/build-airgap-os
 RUN chmod 0700 /usr/local/sbin/build-airgap-os
 
